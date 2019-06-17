@@ -47,6 +47,15 @@ Spring useful annotation for REST:
 	->@RequestBody to use request body(json/xml) as Java param object.
 	
 	all above annotation been used in HelloRestController.
+	
+	
+	
+Response content-type(Accept='application/xml' etc)
+----------------------------------------------------
+by default spring-boot support json conversion with @RestController annotation.
+
+to get xml response type just need to add 'jackson-dataformat-xml' dependency in pom
+
 
  
  
