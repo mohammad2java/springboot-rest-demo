@@ -38,12 +38,13 @@ Spring useful annotation for REST:
 	@PutMapping
 	 Rest Similar for all http methods
 
-	> ResponseEntity<T> use to make customable response as body along with respose 		headers and status-code.
-	->  @PathVariable use to make dynamic url 
-	->  @RequestParam for query parameter
-	->  @RequetHeaders for request header param.
-	-> 	@ModelAttribute for query/form-field  --works without annotation in spring 		boot.
-	-> @RequestBody to use request body(json/xml) as Java param object.
+	ResponseEntity<T> use to make custom-able response as body along with response along headers and status-code.
+	
+	->@PathVariable use to make dynamic url 
+	->@RequestParam for query parameter
+	->@RequetHeaders for request header param.
+	->@ModelAttribute for query/form-field  --works without annotation in spring boot.
+	->@RequestBody to use request body(json/xml) as Java param object.
 	
 	all above annotation been used in HelloRestController.
 
