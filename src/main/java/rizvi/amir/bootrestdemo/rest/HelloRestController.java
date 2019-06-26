@@ -1,6 +1,7 @@
 package rizvi.amir.bootrestdemo.rest;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import rizvi.amir.bootrestdemo.rest.model.ChartData;
 import rizvi.amir.bootrestdemo.rest.model.HelloModel;
 
 @RestController
@@ -140,5 +142,18 @@ public class HelloRestController {
 	}
 	
 	
+	@GetMapping("/test/chart")
+	public List<ChartData> findPieChart() {
+		List<ChartData> ret =  null;
+		ret = ProxyService.getDummyData();
+		return ret;
+	}
+	
+	@GetMapping("/test/chart/list")
+	public List<List> findPieChartList() {
+		List<List> ret =  null;
+		ret = ProxyService.getDummyDataList();
+		return ret;
+	}
 	
 }
